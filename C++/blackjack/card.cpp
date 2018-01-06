@@ -48,7 +48,7 @@ string Card::GetSuit() {
   else if(suit == diamonds) {
     return "Diamonds";
   }
-  else { // suit if clubs
+  else { // suit is clubs
     return "Clubs";
   }
 
@@ -64,7 +64,7 @@ string Card::toString() {
 
   string _final;
 
-  stringstream ss; // use for string building
+  stringstream ss; // used for string building
 
   switch(rank) {
     case 1: ss << "Ace of ";
@@ -108,6 +108,7 @@ string Card::toString() {
 
 int main() {
 
+  // Small test -- basic initialization and functionality check
   Card card(0, Card::spades);
 
   cout << card.toString() << endl;
