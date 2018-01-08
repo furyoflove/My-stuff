@@ -1,3 +1,6 @@
+#include "deck.h"
+#include "card.h"
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -7,7 +10,11 @@ using namespace std;
 
 int main(void) {
 
-  // To do
-  return 1;
+  Deck deck;
+  deck.Shuffle();
 
-}
+  // Card card = deck.GetCard();
+
+  cout << deck.size() << endl;
+
+} // End of main

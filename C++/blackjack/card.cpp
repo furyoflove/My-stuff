@@ -104,13 +104,3 @@ string Card::toString() {
   return _final;
 
 } // End of Card to string
-
-
-int main() {
-
-  // Small test -- basic initialization and functionality check
-  Card card(0, Card::spades);
-
-  cout << card.toString() << endl;
-
-}
