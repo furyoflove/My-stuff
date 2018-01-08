@@ -11,9 +11,6 @@ using namespace std;
 
 Deck::Deck() {
 
-  index = 0;
-  count = 52; // standard deck of cards starts with 52 cards
-
   int suit; // to be used to generate suits for cards
 
   // offset by one because indexing starts at 1 to fit in the range of acceptable ranks
@@ -59,9 +56,8 @@ Card Deck::GetCard() {
 
   Card card;
 
-  if(count > 0) {
+  if(!cards.empty()) {
 
-    count--;
     card = cards.top();
     cards.pop();
 
@@ -73,17 +69,12 @@ Card Deck::GetCard() {
 
 int Deck::size() {
 
-  return count;
+  return cards.size();
 
-}
+} // current deck count
 
 bool Deck::IsEmpty() {
 
-  if(count <= 0 && cards.empty()) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return cards.empty();
 
 } // Check is deck is empty

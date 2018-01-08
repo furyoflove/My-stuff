@@ -20,14 +20,10 @@ class Deck {
 
   private:
 
-    int index; // current card index
-    int count; // returns the total number of cards left in the deck
-
     static const int MAX = 52;
 
     stack<Card> cards; // current deck of cards
 
 };
-
 
 #endif
