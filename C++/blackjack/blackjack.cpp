@@ -13,8 +13,8 @@ int main(void) {
   Deck deck;
   deck.Shuffle();
 
-  // Card card = deck.GetCard();
+  Card card = deck.GetCard();
 
-  cout << deck.size() << endl;
+  cout << card.toString() << endl;
 
 } // End of main

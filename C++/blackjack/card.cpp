@@ -8,6 +8,8 @@ using namespace std;
 
 Card::Card() {
 
+  // if no arguments are passed then the default deck is the single card
+  // the ace of spades...
   rank = 1;
   suit  = Card::spades;
 
@@ -62,8 +64,6 @@ bool Card::SameSuitAs(const Card &other) {
 
 string Card::toString() {
 
-  string _final;
-
   stringstream ss; // used for string building
 
   switch(rank) {
@@ -100,7 +100,6 @@ string Card::toString() {
 
   ss << GetSuit();
 
-  _final = ss.str();
-  return _final;
+  return ss.str();
 
 } // End of Card to string
